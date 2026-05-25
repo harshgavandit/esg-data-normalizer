@@ -19,7 +19,7 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        value: ".onrender.com"
+        value: "asp-net-core-project-la55.onrender.com,.onrender.com,127.0.0.1,localhost"
       - key: CORS_ALLOWED_ORIGINS
         value: "https://breathe-esg-frontend.onrender.com"
   - type: web
