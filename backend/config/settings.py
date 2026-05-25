@@ -57,13 +57,6 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASE_URL = os.getenv("DATABASE_URL", "postgres://breathe:breathe@localhost:5432/breathe_esg")
 DATABASES = {"default": dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
 
-# Force IPv4 for Supabase - replace hostname with resolved IPv4
-if "supabase" in DATABASES["default"].get("HOST", ""):
-    DATABASES["default"]["HOST"] = "172.64.34.193"
-    DATABASES["default"]["OPTIONS"] = {
-        "sslmode": "require",
-    }
-
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
