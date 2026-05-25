@@ -1,0 +1,7 @@
+Belegnummer,Position,Werk,Material,Materialkurztext,Buchungsdatum,Menge,ME,Lieferant,Kategorie
+4900001,10,1000,DIESEL-01,Diesel fuel for generator,2026-01-15,1200,L,VEND-FUEL-22,Fuel
+4900002,10,DE01,NATGAS-07,Natural gas purchase,15.01.2026,8300,KWH,VEND-UTIL-DE,Fuel
+4900003,20,1000,PACK-99,Packaging material,20260118,420,KG,VEND-PACK-04,Procurement
+4900004,10,ZZ99,LUBE-02,,01/22/2026,55,GAL,VEND-MRO-10,Procurement
+4900005,10,1000,DIESEL-01,Diesel credit adjustment,2026-01-25,-20,L,VEND-FUEL-22,Fuel
+

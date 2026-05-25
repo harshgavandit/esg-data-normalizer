@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<greenButtonExport>
+  <reading id="gb-2026-001">
+    <meter_id>MTR-PUNE-001</meter_id>
+    <period_start>2026-01-01</period_start>
+    <period_end>2026-01-31</period_end>
+    <usage>45000</usage>
+    <unit>kWh</unit>
+    <tariff>HT Industrial TOU</tariff>
+    <service_address>Pune Assembly Plant</service_address>
+  </reading>
+  <reading id="gb-2026-002">
+    <meter_id>MTR-HQ-009</meter_id>
+    <period_start>2026-01-07</period_start>
+    <period_end>2026-02-12</period_end>
+    <usage>18.2</usage>
+    <unit>MWh</unit>
+    <tariff>Commercial Green Rider</tariff>
+    <service_address>Mumbai Headquarters</service_address>
+  </reading>
+  <reading id="gb-2026-003">
+    <meter_id>MTR-UNKNOWN-77</meter_id>
+    <period_start>2026-02-01</period_start>
+    <period_end>2026-02-10</period_end>
+    <usage>0</usage>
+    <unit>kWh</unit>
+    <tariff>Unknown</tariff>
+    <service_address>Temporary warehouse</service_address>
+  </reading>
+</greenButtonExport>
+

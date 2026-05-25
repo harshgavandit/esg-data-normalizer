@@ -1,0 +1,48 @@
+{
+  "export_id": "concur-itin-2026-01",
+  "company": "Acme Manufacturing",
+  "segments": [
+    {
+      "segment_id": "seg-1001",
+      "trip_id": "trip-44",
+      "traveler": "Mira Shah",
+      "category": "flight",
+      "origin_airport": "BOM",
+      "destination_airport": "DEL",
+      "start_date": "2026-01-18",
+      "cabin": "economy"
+    },
+    {
+      "segment_id": "seg-1002",
+      "trip_id": "trip-44",
+      "traveler": "Mira Shah",
+      "category": "hotel",
+      "city": "Delhi",
+      "country": "India",
+      "nights": 2,
+      "start_date": "2026-01-18",
+      "end_date": "2026-01-20"
+    },
+    {
+      "segment_id": "seg-1003",
+      "trip_id": "trip-45",
+      "traveler": "Arjun Rao",
+      "category": "ground",
+      "mode": "rideshare",
+      "city": "San Francisco",
+      "distance_km": 42.5,
+      "start_date": "2026-01-28"
+    },
+    {
+      "segment_id": "seg-1004",
+      "trip_id": "trip-46",
+      "traveler": "Anika Menon",
+      "category": "flight",
+      "origin_airport": "BOM",
+      "destination_airport": "ZZZ",
+      "start_date": "2026-01-30",
+      "cabin": "business"
+    }
+  ]
+}
+

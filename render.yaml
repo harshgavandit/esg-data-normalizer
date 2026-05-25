@@ -1,0 +1,32 @@
+databases:
+  - name: breathe-esg-db
+    databaseName: breathe_esg
+    user: breathe
+
+services:
+  - type: web
+    name: breathe-esg
+    runtime: python
+    buildCommand: pip install -r requirements.txt && python backend/manage.py collectstatic --noinput && python backend/manage.py migrate && python backend/manage.py seed_demo
+    startCommand: gunicorn config.wsgi:application --chdir backend
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: breathe-esg-db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: ".onrender.com"
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://breathe-esg-frontend.onrender.com"
+  - type: web
+    name: breathe-esg-frontend
+    runtime: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: "https://breathe-esg.onrender.com/api"
