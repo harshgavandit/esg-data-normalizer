@@ -8,7 +8,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
 DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 ALLOWED_HOSTS = [h for h in os.getenv("ALLOWED_HOSTS", "localhost,127.0.0.1,testserver,").split(",") if h]
-asp-net-core-project-la55.onrender.com
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -58,12 +57,11 @@ WSGI_APPLICATION = "config.wsgi.application"
 DATABASE_URL = os.getenv("DATABASE_URL", "postgres://breathe:breathe@localhost:5432/breathe_esg")
 DATABASES = {"default": dj_database_url.parse(DATABASE_URL, conn_max_age=600)}
 
-# Force IPv4 for Supabase connection from Render
-if "supabase" in DATABASE_URL:
+# Force IPv4 for Supabase - replace hostname with resolved IPv4
+if "supabase" in DATABASES["default"].get("HOST", ""):
+    DATABASES["default"]["HOST"] = "172.64.34.193"
     DATABASES["default"]["OPTIONS"] = {
         "sslmode": "require",
-        "connect_timeout": 10,
-        "hostaddr": "172.64.34.193"
     }
 
 AUTH_PASSWORD_VALIDATORS = [
