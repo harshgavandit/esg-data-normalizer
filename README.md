@@ -54,6 +54,8 @@ The Vite dev server defaults to port 5173.
 
 The frontend expects the API at `http://localhost:8010/api`. Override with `VITE_API_BASE_URL`.
 
+If the backend is running on a different host, update the API base URL before launching the Vite dev server.
+
 ## Deployment
 
 The app is designed for Render with three resources:
