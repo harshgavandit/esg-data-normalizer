@@ -168,6 +168,7 @@ function App() {
           <div className="section-title">
             <h2>Upload source data</h2>
             <p>SAP CSV, Green Button XML, or Concur-style itinerary JSON.</p>
+            <p>Files are attached to each review row for traceability.</p>
           </div>
           <div className="upload-grid">
             {[
