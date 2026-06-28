@@ -179,7 +179,7 @@ function App() {
               <label className="upload-card" key={type}>
                 <FileUp size={22} />
                 <span>{label}</span>
-                <input type="file" onChange={(event) => event.target.files?.[0] && upload(type, event.target.files[0])} />
+                <input accept=".csv,.xml,.json" type="file" onChange={(event) => event.target.files?.[0] && upload(type, event.target.files[0])} />
               </label>
             ))}
           </div>
