@@ -64,9 +64,11 @@ function App() {
   const [selected, setSelected] = useState<ActivityRecord | null>(null);
   const [filters, setFilters] = useState({ source: "", status: "", severity: "" });
   const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const load = async () => {
     if (!token) return;
+    setIsLoading(true);
     const [me, dash, recs, imports] = await Promise.all([
       api(token, "/auth/me/"),
       api(token, "/dashboard/"),
@@ -77,6 +79,7 @@ function App() {
     if (dash.ok) setDashboard(await dash.json());
     if (recs.ok) setRecords(await recs.json());
     if (imports.ok) setBatches(await imports.json());
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -143,6 +146,7 @@ function App() {
       <main>
         <header className="topbar">
           <div>
+            {isLoading && <p className="eyebrow">Refreshing data…</p>}
             <p className="eyebrow">Analyst review workspace</p>
             <h1>Normalize, review, approve, lock.</h1>
           </div>
