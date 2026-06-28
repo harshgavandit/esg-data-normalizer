@@ -2,6 +2,8 @@
 
 A Django REST + React prototype for ingesting realistic ESG activity data, normalizing it, and giving analysts a review-and-lock workflow before audit.
 
+The project includes seeded demo data so the review workflow can be explored quickly on a local machine.
+
 ## What This Demonstrates
 
 - Three realistic source shapes: SAP CSV, Green Button utility XML, and Concur-style travel JSON.
