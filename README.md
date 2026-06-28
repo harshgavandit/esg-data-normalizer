@@ -50,6 +50,8 @@ npm install
 npm run dev
 ```
 
+The Vite dev server defaults to port 5173.
+
 The frontend expects the API at `http://localhost:8010/api`. Override with `VITE_API_BASE_URL`.
 
 ## Deployment
